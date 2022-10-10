@@ -27,7 +27,6 @@
     "build-all": "yarn run build && yarn run build-plugin && yarn run build-react-chunks",
     "prepare": "yarn run -s build",
     "build-react-chunks": "./node_modules/.bin/babel src/react-chunks.js --out-file dist/react/hoc.js",
-    "bundlesize": "bundlesize",
     "changelog": "yarn conventional-changelog -i CHANGELOG.md -s -r 0",
     "release": "cross-var yarn run build-all -s && cross-var git commit -am $npm_package_version && cross-var git tag $npm_package_version && git push && git push --tags"
   },
@@ -44,32 +43,25 @@
     "throttles": "^1.0.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "bundlesize": "^0.18.0",
-    "chai": "^4.2.0",
-    "conventional-changelog-cli": "^2.0.11",
+    "@babel/cli": "^7.19.0",
+    "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.0",
+    "@babel/preset-react": "^7.18.0",
+    "chai": "^4.3.0",
+    "conventional-changelog-cli": "^2.2.2",
     "cross-var": "^1.1.0",
-    "eslint": "^6.7.1",
+    "eslint": "^8.25.0",
     "eslint-config-google": "^0.14.0",
-    "http-server": "^0.12.0",
+    "http-server": "^14.1.0",
     "lodash": "^4.17.11",
-    "microbundle": "0.11.0",
-    "mocha": "^6.2.2",
-    "puppeteer": "^2.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "bundlesize": [
-    {
-      "path": "./dist/*.js",
-      "maxSize": "2 kB"
-    }
-  ]
+    "microbundle": "0.15.0",
+    "mocha": "^10.0.0",
+    "puppeteer": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
